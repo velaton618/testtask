@@ -3,7 +3,7 @@ import s from './Service.module.css';
 import { openModal } from "../../redux/slices/modalSlice";
 import StrategyIcon from '../Icons/StrategyIcon';
 
-export default function Service(args) {
+export default function Service(args: any) {
     const dispatch = useDispatch();
 
     return (

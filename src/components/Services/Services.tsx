@@ -42,7 +42,7 @@ export default function Services() {
 	return (
 		<>
 			{isLoading ? <div>Loading...</div> : <div className={s.services}>
-				{services?.map((product) => (
+				{services?.map((product: any) => (
 					<div key={product.id}>
 						<Service product={product} />
 					</div>
