@@ -1,5 +1,6 @@
 import s from './App.module.css'
 import Services from './components/Services/Services'
+import ServiceModal from './components/ServiceModal/ServiceModal'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className={s.line}/>
         <p className={s.description}>Интеграция безупречного производства, передовых технологий и тщательного измерения производительности</p>
       </div>
+      <ServiceModal/>
       <Services/>
     </div>
   )
