@@ -1,10 +1,14 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IProduct } from "../../types/IProduct";
+import { IModalState } from "../../types/IModalState";
+
+const initialState: IModalState = { value: false, service: null };
 
 export const modalSlice = createSlice({
   name: "modal",
-  initialState: { value: false, service: null },
+  initialState: initialState,
   reducers: {
-    openModal: (state, action) => {
+    openModal: (state, action: PayloadAction<IProduct>) => {
       state.value = true;
       state.service = action.payload;
     },

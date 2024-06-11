@@ -1,16 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../redux/slices/modalSlice';
 import s from './ServiceModal.module.css'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
 export default function ServiceModal() {
-	const isModal = useSelector((state) => state.modal.value);
-	const modalService = useSelector((state) => state.modal.service);
-	const dispatch = useDispatch();
+	const isModal = useAppSelector((state) => state.modal.value);
+	const modalService = useAppSelector((state) => state.modal.service);
+	const dispatch = useAppDispatch();
 
 	return (
 		<>
 			{isModal && <div className={s.modal} id='back' onClick={(event) => {
-				if (event.target.id === 'back') {
+				if (event.currentTarget.id === 'back') {
 					dispatch(closeModal())
 				}
 			}}>
