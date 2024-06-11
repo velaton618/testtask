@@ -2,10 +2,11 @@ import { useGetProductsQuery } from '../../redux/api/productsApi'
 import s from "./Services.module.css";
 import Service from '../Service/Service';
 import { useEffect, useState } from 'react';
+import { IProduct } from '../../types/IProduct';
 
 export default function Services() {
 	const { data, isError, isLoading } = useGetProductsQuery();
-	const [services, setServices] = useState([]);
+	const [services, setServices] = useState<IProduct[]>([]);
 
 	useEffect(() => {
 		// Это просто для сходства с макетом, в реальном проекте я бы делал по-другому.
@@ -42,7 +43,7 @@ export default function Services() {
 	return (
 		<>
 			{isLoading ? <div>Loading...</div> : <div className={s.services}>
-				{services?.map((product: any) => (
+				{services?.map((product: IProduct) => (
 					<div key={product.id}>
 						<Service product={product} />
 					</div>
