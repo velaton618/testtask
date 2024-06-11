@@ -17,8 +17,8 @@
     position: relative;
 
     background: var(--bg);
-    height: 80%;
-    width: 80%;
+    height: 50%;
+    width: 50%;
     padding: 2rem;
 
     border-radius: 1rem;
@@ -74,4 +74,16 @@
 .modal .inner .closeBtn {
     width: 2rem;
     height: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .modal .inner {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .modal .inner .title {
+        font-size: 1.2rem;
+    }
 }
