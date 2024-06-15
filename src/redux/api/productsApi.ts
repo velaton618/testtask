@@ -7,8 +7,9 @@ export const productsApi = createApi({
   endpoints: (builder) => ({
     getProducts: builder.query<IProductResponse, void>({
       query: () => "/products?limit=8&skip=0",
-    })
-  })
-})
+    }),
+  }),
+});
 
 export const { useGetProductsQuery } = productsApi;
+

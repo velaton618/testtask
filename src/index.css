@@ -3,10 +3,14 @@
 body {
   font-family: "Roboto", sans-serif;
   --bg: #fff;
-  --fg: #2B4074;
-  --fg-2: #4A4A4A;
+  --fg: #2b4074;
+  --fg-2: #4a4a4a;
   --fg-3: #797979;
-  --border: #F9F6E5;
+  --border: #f9f6e5;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 * {
